@@ -19,13 +19,21 @@ psexec.exe -si -accepteula %~dp0serviceui %~dp0Deploy-Application.exe -Deploymen
 Prior to running the New-PSATAppDeployment function your target application folder strucure should look like this:
 
 AppDeployToolkit                  - folder containing the toolkit scripts
+
 Files                             - folder containing the application install media
+
 SupportFiles                      - folder containing any additional files required to install the application     
+
 Deploy-Application.exe                                                                 
+
 Deploy-Application.exe.config                                                           
+
 Deploy-Application.ps1                                                                 
+
 Install.cmd                                                                             
+
 ServiceUI.exe                                                                           
+
 Uninstall.cmd                   
 
 
