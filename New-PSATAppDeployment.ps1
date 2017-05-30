@@ -21,11 +21,11 @@ The maximum allowed runtime in minutes for the SCCM application, default is 180 
 .PARAMETER ADGroup
 Include this switch to have the function create an Active Directory group and create a query rule to add this group to the install collection
 .EXAMPLE
-   Create-CMAppDeployment -ApplicationName 'Visio Standard' -Manufacturer Microsoft -Version '2013' -SourcePath '\\SCCM01\Software\Microsoft\Visio2013' -DetectionMethod '{90150000-0053-0000-0000-0000000FF1CE}' -ADGroup
+   New-PSATAppDeployment -ApplicationName 'Visio Standard' -Manufacturer Microsoft -Version '2013' -SourcePath '\\SCCM01\Software\Microsoft\Visio2013' -DetectionMethod '{90150000-0053-0000-0000-0000000FF1CE}' -ADGroup
 
    This example will create an Active Directory group, an application and deployment type, install and uninstall collections, install and uninstall deployments for Microsoft Visio Standard 2013
 .EXAMPLE
-   Create-CMAppDeployment -ApplicationName Photoshop -Manufacturer Adobe -Version 'CC 2015' -SourcePath '\\SCCM01\Software\Adobe\AdobePhotoshopCC2015' -DetectionMethod '{1BBD1E71-DBEA-42FF-A7B9-DCE3C1DB2209}' -MaxRuntime 240
+   New-PSATAppDeployment -ApplicationName Photoshop -Manufacturer Adobe -Version 'CC 2015' -SourcePath '\\SCCM01\Software\Adobe\AdobePhotoshopCC2015' -DetectionMethod '{1BBD1E71-DBEA-42FF-A7B9-DCE3C1DB2209}' -MaxRuntime 240
 
    This example will create an application and deployment type, install and uninstall collections, install and uninstall deployments for Adobe Photoshop CC 2015 and sets the maximum allowed runtime in minutes for the SCCM application to 4 hours
 #>
