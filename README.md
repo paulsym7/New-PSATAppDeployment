@@ -25,5 +25,5 @@ d-----       13/02/2017     03:37                SupportFiles
 -a----       19/10/2015     09:37          70936 ServiceUI.exe                                                                           
 -a----       15/05/2017     21:39             95 Uninstall.cmd                   
 
-The function makes a couple of assumptions about the structure of the SCCM applications and collections folders. It will look to create applications underneath a folder named after the vendor of the application otherwise it will be created in the root folder. Similarly with collections, the function will look for an Applications\vendor folder to put the install and uninstall collections in. If one cannot be found the collections will be created in the root folder.
+Applications and collections will be created in the root folder of the relevant area. The New-PSATAppDeployment function contains commented out sections on how these can be moved to other folders underneath the root.
 
