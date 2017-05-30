@@ -44,7 +44,7 @@ When the -ADGroup switch is used, an active directory group will be created alon
 
 
 # Example use
-New-PSATAppDeployment -ApplicationName 'name' -Manufacturer 'manufacturer' -SourcePath '\\SCCM01\Software\ApplicationName' -DetectionMethod '{MSIProductCode}'
+New-PSATAppDeployment -ApplicationName 'name' -Manufacturer 'manufacturer' -SourcePath '\\\SCCM01\Software\ApplicationName' -DetectionMethod '{MSIProductCode}'
 
 More detailed help and further examples can be found by running Get-Help New-PSATAppDeployment -Full
 
