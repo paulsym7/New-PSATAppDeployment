@@ -147,7 +147,7 @@ Include this switch to have the function create an Active Directory group and cr
             Write-Verbose "Moved the $AppInstall and $UninstallCollection collections into the $colfolderpath folder"
             #>
 
-            # Create new application and add an icon if one exists in the $iconfile path
+            # Create new application and add an icon if one exists in the $iconfile path, the icon file name must match the application name
             if((Get-ChildItem -path FileSystem::$iconpath).name -contains "$ApplicationName.ico"){
                 New-CMApplication -Name $FullName -AutoInstall $true -Publisher $Manufacturer -SoftwareVersion $Version -IconLocationFile "$iconpath\$ApplicationName.ico" -LocalizedName $FullName | Out-Null
             }
