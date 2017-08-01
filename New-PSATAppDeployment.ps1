@@ -71,7 +71,7 @@ Include this switch to have the function create an Active Directory group and cr
             $SiteServerName = (Get-ItemProperty HKLM:\SOFTWARE\Wow6432Node\Microsoft\ConfigMgr10\AdminUI\Connection -Name Server).Server  
             $ProviderLocation = Get-CimInstance -ComputerName $SiteServerName -Namespace root\sms SMS_ProviderLocation -filter "ProviderForLocalSite='True'" 
             $SiteCode = $ProviderLocation.SiteCode 
-            Import-Module $modulepath\ConfigurationManager.psd1
+            Import-Module $modulepath\ConfigurationManager.psd1 -Global
         }
 
         Set-Location $SiteCode":"
